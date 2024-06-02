@@ -21,6 +21,7 @@ bool AudioCtrl::isRunning()
 
 void AudioCtrl::handle()
 {
-    if (!mp3->loop())
-        mp3->stop();
+    if (isRunning())
+        if (!mp3->loop())
+            mp3->stop();
 }

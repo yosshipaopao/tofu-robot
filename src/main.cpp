@@ -25,7 +25,6 @@ ScreenCtrl screen_ctrl(XPT2046_IRQ, XPT2046_MOSI, XPT2046_MISO, XPT2046_CLK, XPT
 AudioCtrl audio_ctrl;
 Sprite TXT(screen_ctrl.tft, Vec2(320, 240));
 
-
 ////////////////////////////////
 //                            //
 //          Main Code         //
@@ -41,10 +40,9 @@ void setup()
 {
   screen_ctrl.init();
   audio_ctrl.init();
-  audio_ctrl.play((char*)"/audio-test.mp3");
+  audio_ctrl.play((char *)"/audio-test.mp3");
 
-    xTaskCreatePinnedToCore(Core0a, "Core0a", 4096, NULL, 3, &thp[0], 0); 
-
+  xTaskCreatePinnedToCore(Core0a, "Core0a", 4096, NULL, 3, &thp[0], 0);
 
   // BG
   screen_ctrl.drawBG(img);
@@ -60,7 +58,7 @@ void setup()
 }
 
 void loop()
-{ 
+{
   if (screen_ctrl.touched())
   {
     Vec3 p = screen_ctrl.getPoint();
@@ -70,13 +68,14 @@ void loop()
   }
 }
 
-void Core0a(void *args) {
-  while (1) {
-    if (audio_ctrl.isRunning())audio_ctrl.handle();
-    delay(10);
+void Core0a(void *args)
+{
+  while (1)
+  {
+    audio_ctrl.handle();
+    delay(25);
   }
 }
-
 
 // Print Touchscreen info about X, Y and Pressure (Z) on the TFT Display
 void printTouchToDisplay(int touchX, int touchY, int touchZ)
