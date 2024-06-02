@@ -9,15 +9,13 @@
 
 class AudioCtrl
 {
-    void MDCallback(void *cbData, const char *type, bool isUnicode, const char *string);
+public:
     AudioGeneratorMP3 *mp3;
     AudioFileSourceSPIFFS *file;
     AudioOutputI2S *out;
     AudioFileSourceID3 *id3;
-
-public:
     void init();
-    void play(char *path, void (*callback)(void *cbData, const char *type, bool isUnicode, const char *string)=MDCallback);
+    void play(char *path);
     bool isRunning();
     void handle();
 };

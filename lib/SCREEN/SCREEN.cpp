@@ -9,9 +9,6 @@ void ScreenCtrl::init()
     tft.init();
     tft.setRotation(1);
     tft.setTextColor(TFT_BLACK);
-
-    TXT.setColorDepth(8);
-    TXT.setTextColor(TFT_BLACK);
 }
 
 bool ScreenCtrl::touched()

@@ -23,7 +23,6 @@ public:
     const int WIDTH;
     const int HEIGHT;
     TFT_eSPI tft = TFT_eSPI();
-    TFT_eSprite TXT = TFT_eSprite(&tft);
     ScreenCtrl(int _irq, int _mosi, int _miso, int _clk, int _cs, int _width, int _height)
         : IRQ(_irq), MOSI(_mosi), MISO(_miso), CLK(_clk), CS(_cs), WIDTH(_width), HEIGHT(_height), touchscreen(_cs, _irq) {}
     void init();
