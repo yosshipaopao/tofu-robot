@@ -7,6 +7,7 @@ void ScreenCtrl::init()
     touchscreen.setRotation(1);
 
     tft.init();
+    tft.initDMA();
     tft.setRotation(1);
     tft.setTextColor(TFT_BLACK);
 }

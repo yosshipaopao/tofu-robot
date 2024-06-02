@@ -2,16 +2,14 @@
 
 void AudioCtrl::init()
 {
-    SPIFFS.begin();
     out = new AudioOutputI2S(0, AudioOutputI2S::INTERNAL_DAC);
     mp3 = new AudioGeneratorMP3();
 }
 
 void AudioCtrl::play(char *path)
 {
-    file = new AudioFileSourceSPIFFS(path);
-    id3 = new AudioFileSourceID3(file);
-    mp3->begin(id3, out);
+    file = new AudioFileSourceLittleFS(path);
+    mp3->begin(file, out);
 }
 
 bool AudioCtrl::isRunning()
