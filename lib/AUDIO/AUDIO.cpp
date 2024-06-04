@@ -8,8 +8,13 @@ void AudioCtrl::init()
 
 void AudioCtrl::play(char *path)
 {
+#ifdef USE_SD
+    file = new AudioFileSourceSD(path);
+#else
     file = new AudioFileSourceLittleFS(path);
-    mp3->begin(file, out);
+#endif
+    Serial.printf("%d !!!\n",mp3->begin(file, out));
+    //;
 }
 
 bool AudioCtrl::isRunning()

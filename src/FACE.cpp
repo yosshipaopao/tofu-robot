@@ -3,6 +3,9 @@
 void FaceCtrl::begin()
 {
     tft->fillScreen(TFT_WHITE);
+    cheek.init(cheeks);
+    eye.init(eyes);
+    mouth.init(mouses);
     cheek.ready();
     eye.ready();
     mouth.ready();
@@ -22,7 +25,7 @@ void FaceCtrl::handle()
 {
     if (!state)
         return;
-    cheek.draw("/cheek.bmp", true);
-    eye.draw("/eye/eye_0000.bmp", true);
-    mouth.draw("/mouse/mouse_0000.bmp");
+    cheek.draw(random(-1, 1), random(-1, 1));
+    eye.draw(random(0, 13), random(0, 13));
+    mouth.draw(random(0, 13));
 }

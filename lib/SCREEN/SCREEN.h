@@ -2,7 +2,6 @@
 #define _SCREEN_h
 
 #include <SPI.h>
-#include <SPIFFS.h>
 #include <TFT_eSPI.h>
 #include <XPT2046_Touchscreen.h>
 
