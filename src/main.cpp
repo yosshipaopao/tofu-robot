@@ -15,7 +15,7 @@
 #define XPT2046_IRQ 34  // T_IRQ
 #define XPT2046_MOSI 32 // T_DIN
 #define XPT2046_MISO 35 // T_OUT
-#define XPT2046_CLK 22  // T_CLK
+#define XPT2046_CLK 27  // T_CLK
 #define XPT2046_CS 33   // T_CS
 
 ScreenCtrl screen_ctrl(XPT2046_IRQ, XPT2046_MOSI, XPT2046_MISO, XPT2046_CLK, XPT2046_CS, 320, 240);
@@ -45,7 +45,7 @@ void setup()
   }
   screen_ctrl.init();
   audio_ctrl.init();
-  audio_ctrl.play((char *)"/audio-test.mp3");
+  audio_ctrl.play((char *)"/unwelcome.mp3");
   face_ctrl.begin();
 
   xTaskCreatePinnedToCore(Core0a, "Core0a", 4096, NULL, 3, &thp[0], 0);
@@ -76,6 +76,9 @@ void Core0a(void *args)
   while (1)
   {
     audio_ctrl.handle();
+    if (!audio_ctrl.isRunning())
+      audio_ctrl.play((char *)"/unwelcome.mp3");
+    
     delay(25);
   }
 }

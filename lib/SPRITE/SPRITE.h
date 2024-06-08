@@ -4,6 +4,7 @@
 #include <TFT_eSPI.h>
 #include "FS.h"
 #include "UTILS.h"
+#include "IMG.h"
 
 #include <LittleFS.h>
 #define FileSys LittleFS

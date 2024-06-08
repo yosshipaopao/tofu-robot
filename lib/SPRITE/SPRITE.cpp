@@ -52,18 +52,24 @@ void Sprite::drawBmp(char *filename, bool reverse)
     return;
   }
   Serial.printf("file %s found !!!\n", filename);
-  uint16_t w, h;
 
   uint32_t startTime = millis();
 
-  h = (rawFile.read() >> 8) + rawFile.read();
-  w = (rawFile.read() >> 8) + rawFile.read();
+  ImgParser img_parser(rawFile);
+
+  uint16_t w, h;
+  Vec2 tmp = img_parser.ReadHeader();
+  Serial.println("Header Read");
+  h = tmp.x;
+  w = tmp.y;
+
+  Serial.printf("h,w=%d,%d\n", h, w);
 
   for (uint16_t x = 0; x < h; x++)
   {
     for (uint16_t y = 0; y < w; y++)
     {
-      Spr.drawPixel(reverse ? w - y - 1 : y, x, byteTo565((byte)rawFile.read()));
+      Spr.drawPixel(reverse ? w - y - 1 : y, x, byteTo565((byte)img_parser.read()));
     }
   }
   rawFile.close();
@@ -88,6 +94,6 @@ void Sprite::draw(short id, short id_2)
       blank();
     else
       drawBmp(files[id_2], true);
-    pushSprite(Vec2(-1,-1),true);
+    pushSprite(Vec2(-1, -1), true);
   }
 }
