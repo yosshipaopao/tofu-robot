@@ -43,10 +43,10 @@ void setup()
     while (1)
       yield();
   }
-  screen_ctrl.init();
+  //screen_ctrl.init();
   audio_ctrl.init();
   audio_ctrl.play((char *)"/unwelcome.mp3");
-  face_ctrl.begin();
+  //face_ctrl.begin();
 
   xTaskCreatePinnedToCore(Core0a, "Core0a", 4096, NULL, 3, &thp[0], 0);
   delay(400);

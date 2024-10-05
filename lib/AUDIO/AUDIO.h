@@ -6,6 +6,7 @@
 #include "AudioOutputI2S.h"
 #include <LittleFS.h>
 #include "AudioFileSourceLittleFS.h"
+#include "BluetoothA2DPSink.h"
 
 class AudioCtrl
 {
