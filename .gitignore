@@ -13,3 +13,4 @@
 .vscode/ipch
 circuit/embed/embed-backups/*
 circuit/main/main-backups/*
+/circuit/embed/production/backups

@@ -1,0 +1,224 @@
+(footprint "TO-92-3"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "http://www.ti.com/lit/ds/symlink/tl431a.pdf")
+	(property "Reference" "REF**"
+		(at 1.27 -3.35 0)
+		(layer "F.SilkS")
+		(uuid "699ff5c3-1323-44ff-a95b-37b7f48b9eff")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TO-92-3"
+		(at 1.27 2.5 0)
+		(layer "F.Fab")
+		(uuid "32c5eaf3-6dad-4ad5-b0c7-449f12197ba9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "393ea791-844c-47d7-8fe4-43391bfcb457")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ed1c7100-8286-40f9-97cf-1b79f085ba09")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2c4342ca-ac87-4c3e-8538-1f31b8c7fe76")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -1.08 1.6)
+		(end -1.23 1.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "876683e4-d402-41cd-9f9d-fa1e48f2d6c1")
+	)
+	(fp_line
+		(start -0.78 1.6)
+		(end -1.08 1.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e7937013-d537-4373-8b64-74e7357b10d7")
+	)
+	(fp_line
+		(start 3.62 1.6)
+		(end 3.32 1.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "771f7903-6a4f-44a3-be98-1b91c7d5ef93")
+	)
+	(fp_line
+		(start 3.62 1.6)
+		(end 3.77 1.3)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3c4efa46-18c1-4834-ac04-57eeca6b356e")
+	)
+	(fp_arc
+		(start -0.63 -1.6)
+		(mid 1.305355 -2.372361)
+		(end 3.22 -1.55)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e39911e9-5dbe-4788-a7dc-cdf31845683e")
+	)
+	(fp_line
+		(start -1.63 -2.5)
+		(end 4.17 -2.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e01a2094-69d5-4be6-b2e3-a4a8248573e3")
+	)
+	(fp_line
+		(start -1.63 1.75)
+		(end -1.63 -2.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "6c441111-ff1e-4d08-906f-fd3b099aeb46")
+	)
+	(fp_line
+		(start -1.63 1.75)
+		(end 4.17 1.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "70114d2c-a3c9-427f-bab1-58757e70d8b9")
+	)
+	(fp_line
+		(start 4.17 1.75)
+		(end 4.17 -2.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0517b7e3-8eba-4dd5-baf6-8d363654213b")
+	)
+	(fp_line
+		(start 3.57 1.5)
+		(end -1.03 1.5)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "59868688-3b10-4a9c-8648-26a39913deeb")
+	)
+	(fp_arc
+		(start -1.33 0.3)
+		(mid -0.568478 -1.538478)
+		(end 1.27 -2.3)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f50b3640-990e-4666-9602-7e4978f33c00")
+	)
+	(fp_arc
+		(start -1.03 1.5)
+		(mid 1.267609 -2.294223)
+		(end 3.572208 1.495758)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "8535228f-f1ca-4037-ae7d-144415e7b788")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 1.27 -1.25 180)
+		(layer "F.Fab")
+		(uuid "bcf51e2a-1530-4e48-b394-b425f7d5a62a")
+		(effects
+			(font
+				(size 0.75 0.75)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 0 0 180)
+		(size 1 1.5)
+		(drill 0.55)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "ce6f402a-242a-4069-a415-b5014525f391")
+	)
+	(pad "2" thru_hole oval
+		(at 1.27 0 180)
+		(size 1 1.5)
+		(drill 0.55)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "42b9137f-3e96-444b-8e0d-ed3026295f9e")
+	)
+	(pad "3" thru_hole oval
+		(at 2.54 0 180)
+		(size 1 1.5)
+		(drill 0.55)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "01f46d6f-b8a0-41b2-b3c0-e4167861b049")
+	)
+)
